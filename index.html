@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mini-juego Smartbox</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header class="top">
+      <div class="badge">Mini‑juego</div>
+      <h1>Tu regalo se decide con un juego</h1>
+      <p class="sub">Responde y descubre tu experiencia ideal.</p>
+    </header>
+
+    <section class="card" id="card">
+      <div class="progress">
+        <div class="bar" id="bar"></div>
+      </div>
+
+      <div id="screenStart" class="screen">
+        <p class="hint">Tiempo estimado: 1–2 minutos.</p>
+        <button class="btn primary" id="startBtn">Empezar</button>
+      </div>
+
+      <div id="screenQuiz" class="screen hidden" aria-live="polite">
+        <div class="qmeta">
+          <span id="qnum"></span>
+          <button class="link" id="backBtn" type="button">Volver</button>
+        </div>
+        <h2 id="question"></h2>
+        <div id="options" class="options"></div>
+      </div>
+
+      <div id="screenResult" class="screen hidden">
+        <div class="result">
+          <div class="spark">✦</div>
+          <h2>Resultado</h2>
+          <p class="resultLine" id="resultLine"></p>
+          <p class="resultSub">Ahora viene la mejor parte: <strong>elegirlo juntos</strong>.</p>
+          <div class="pill" id="resultPill"></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn" id="restartBtn">Repetir</button>
+          <button class="btn primary" id="copyBtn">Copiar resultado</button>
+        </div>
+
+        <details class="details">
+          <summary>Ver mis respuestas</summary>
+          <ol id="pathList"></ol>
+        </details>
+
+        <p class="tiny">Nota: el resultado te guía a una categoría. La experiencia final es “A escoger”.</p>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <span>Hecho con cariño.</span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
